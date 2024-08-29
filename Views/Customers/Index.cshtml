@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ABC_Retail.Models.Customer>
+
+<div class="text-center">
+    <h1 class="display-5">Customers</h1>
+
+    <p>
+        <a href="@Url.Action("AddCustomer")" class="btn btn-primary">Add New Customer</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Customer_Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Customer_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Customer_Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Customer_Phone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Customer_Address)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@customer.Customer_Id</td>
+                    <td>@customer.Customer_Name</td>
+                    <td>@customer.Customer_Email</td>
+                    <td>@customer.Customer_Phone</td>
+                    <td>@customer.Customer_Address</td>
+                    <td>
+                        <form asp-action="DeleteCustomer" method="post" style="display:inline;">
+                            <input type="hidden" name="partitionKey" value="@customer.PartitionKey" />
+                            <input type="hidden" name="rowKey" value="@customer.RowKey" />
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this customer?');">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

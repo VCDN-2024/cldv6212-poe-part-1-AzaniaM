@@ -1,0 +1,37 @@
+﻿@model ABC_Retail.Models.Customer
+
+<h1>Create</h1>
+
+<h4>Customer</h4>
+<form asp-action="AddCustomer" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Customer_Id">Customer ID</label>
+        <input asp-for="Customer_Id" class="form-control" />
+        <span asp-validation-for="Customer_Id" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Customer_Name">Name</label>
+        <input asp-for="Customer_Name" class="form-control" />
+        <span asp-validation-for="Customer_Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Customer_Email">Email</label>
+        <input asp-for="Customer_Email" class="form-control" />
+        <span asp-validation-for="Customer_Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Customer_Phone">Phone</label>
+        <input asp-for="Customer_Phone" class="form-control" />
+        <span asp-validation-for="Customer_Phone" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Customer_Address">Address</label>
+        <input asp-for="Customer_Address" class="form-control" />
+        <span asp-validation-for="Customer_Address" class="text-danger"></span>
+    </div>
+    <button type="submit">Add Customer</button>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

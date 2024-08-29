@@ -1,0 +1,192 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+    <style>
+        .course{
+            width: 80%;
+            margin:auto;
+            text-align:center;
+            padding-top:100px;
+        }
+        .row {
+            margin-top: 8%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .course-col{
+            flex-basis: 33%;
+            background:#fff3f3;
+            border-radius: 10px;
+            margin-bottom:5%;
+            padding:20px 12px;
+            box-sizing:border-box;
+            justify-content: space-between;
+            transition:0.5s;
+        }
+        .h3{
+            text-align:center;
+            font-weight:600;
+            margin: 10px 0;
+        }
+        .course-col:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+        }
+        .campus{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .campus-col{
+            flex-basis:32%;
+            border-radius:10px;
+            margin-bottom:30px;
+            position:relative;
+            overflow:hidden;
+        }
+        .campus-col img{
+            width:100%;
+        }
+        .layer{
+            background: transparent;
+            height:100%;
+            width:100%;
+            position:absolute;
+            top:0;
+            left:0;
+            transition:0.5s;
+        }
+        .layer:hover{
+            background: rgba(226,0,0,0.7);
+        }
+        .layer h3{
+            width: 100%;
+            font-weight: 500;
+            color: darkgrey;
+            font-size: 26px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position:absolute;
+        }
+        .layer:hover h3{
+            bottom:49%;
+            opacity:1;
+        }
+        .facilities{
+            width:80%;
+            margin:auto;
+            text-align:center;
+            padding-top:100px;
+        }
+        .facilities-col{
+            flex-basis:31%;
+            border-radius:10px;
+            margin-bottom:5%;
+            text-align:left;
+        }
+        .facilities-col img{
+            width:300px;
+            border-radius:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <div class="text-dark">
+            <h1 class="display-4">WELCOME TO ABC AESTHETICS</h1>
+        </div>
+        <p>Discover our Sparkling Collection, crafted for Every Moment!</p>
+        <img src="~/images/clean elegant typography brand logo.png" />
+    </div>
+    <section class="course">
+        <h1 class="display-5">Featured Collections</h1>
+        <p>Here are some featured collections we offer.</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Engagement Rings</h3>
+                <p>
+                    Celebrate forever with our exquisite collection of engagement rings. Eacg piece is 
+                    meticulously crafted to symbolize your unique love story, offering timeless
+                    elegance and enduring quality.
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Custom Jewelry</h3>
+                <p>
+                    Bring your dream jewelry to life with our custome design services. Work with our
+                    expert craftsmen to create a one-of-a-kind piece that reflects your unique
+                    style and personality.
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Gemstone Jewelry</h3>
+                <p>
+                    Explore the vibrant world of gemstone jewelry. Our collection features an array of 
+                    stunning, hand-selected gems set in designs that showcase their natural beauty
+                    and brilliance.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="campus">
+        <h1 class="display-5">Our Global Stores</h1>
+        <p>These are where some of our stores are located.</p>
+
+        <div class="row">
+            <div class="campus-col">
+                <img src="~/images/london.jpg" />
+                <div class="layer">
+                    <h3>LONDON</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="~/images/newyork1.jpg" />
+                <div class="layer">
+                    <h3>NEW YORK</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="~/images/washington1.jpg" />
+                <div class="layer">
+                    <h3>WASHINGTON</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="facilities">
+        <h1 class="display-5">Our Facilities</h1>
+        <p>These are our different facilities.</p>
+
+        <div class="row">
+            <div class="facilities-col">
+                <img src="~/images/grillz.webp" />
+                <h3>Customization and Personalization</h3>
+                <p>We allow customers to modify existing designs or create entirely new pieces.
+                    We also provide services for adding personal touches, such as names, dates, 
+                    or symbols.
+                </p>
+            </div>
+            <div class="facilities-col">
+                <img src="~/images/consultant.webp" />
+                <h3>Consultation Services</h3>
+                <p>
+                    We have dedicated staff who assist customers in choosing the right piece, 
+                    offering personalized recommendations based on style, budget, and occasion.
+                    
+                </p>
+            </div>
+            <div class="facilities-col">
+                <img src="~/images/workshop3.jpg" />
+                <h3>On-Site Workshop</h3>
+                <p>
+                    We have an in-house workshop for repairs, resizing, and refurbishing jewelry pieces.
+                    A facility where customers can work with designers to create bespoke jewelry.
+                    Equipment for engraving messages, dates, or initials on jewelry.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
